@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Glamour Touch Salon & Makeup Studio</title>
+
+    <!-- Link to website stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+
+        <!-- Salon Logo -->
+        <a href="index.html">
+            <img src="images/logo.png"
+                 alt="Glamour Touch Salon & Makeup Studio Logo"
+                 class="logo">
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="prices.html">Price List</a>
+            <a href="booking.html">Book Appointment</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Page Introduction -->
+        <section class="page-heading">
+
+            <h1>Book an Appointment</h1>
+
+            <p>
+                Complete the form below to request an appointment
+                with Glamour Touch Salon & Makeup Studio.
+            </p>
+
+        </section>
+
+
+        <!-- Booking Form -->
+        <section class="booking-section">
+
+            <form>
+
+                <!-- Full Name -->
+                <label for="name">Full Name</label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your full name"
+                       required>
+
+
+                <!-- Phone Number -->
+                <label for="phone">Phone Number</label>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number"
+                       required>
+
+
+                <!-- Email -->
+                <label for="email">Email Address</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email address"
+                       required>
+
+
+                <!-- Service -->
+                <label for="service">Select a Service</label>
+
+                <select id="service" name="service" required>
+
+                    <option value="">-- Choose a Service --</option>
+
+                    <option value="hair-styling">
+                        Hair Styling
+                    </option>
+
+                    <option value="makeup">
+                        Professional Makeup
+                    </option>
+
+                    <option value="nails">
+                        Nail Care
+                    </option>
+
+                    <option value="eyelashes">
+                        Eyelash Extensions
+                    </option>
+
+                    <option value="eyebrows">
+                        Eyebrow Shaping
+                    </option>
+
+                    <option value="skincare">
+                        Skincare Treatment
+                    </option>
+
+                </select>
+
+
+                <!-- Appointment Date -->
+                <label for="date">Preferred Date</label>
+
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required>
+
+
+                <!-- Appointment Time -->
+                <label for="time">Preferred Time</label>
+
+                <input type="time"
+                       id="time"
+                       name="time"
+                       required>
+
+
+                <!-- Additional Notes -->
+                <label for="message">Additional Notes</label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="6"
+                          placeholder="Tell us anything we should know about your appointment"></textarea>
+
+
+                <!-- Submit Button -->
+                <button type="submit" class="button">
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Booking Information -->
+        <section class="call-to-action">
+
+            <h2>Appointment Information</h2>
+
+            <p>
+                Please note that submitting this form is an appointment
+                request. Our salon team will contact you to confirm
+                your booking.
+            </p>
+
+            <p>
+                For urgent enquiries, please contact Glamour Touch
+                directly by phone or WhatsApp.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Glamour Touch Salon & Makeup Studio.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

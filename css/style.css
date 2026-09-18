@@ -1,0 +1,850 @@
+/* ========================================
+   GENERAL WEBSITE STYLING
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #ffffff;
+}
+
+
+/* ========================================
+   HEADER AND NAVIGATION
+   ======================================== */
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+nav a {
+    color: #222222;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f06e97;
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    min-height: 600px;
+
+    /* PNG background image */
+    background-image: url("../images/salon-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+
+/* Text area on top of the image */
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.button {
+    display: inline-block;
+
+    background-color: #c08081;
+    color: white;
+
+    padding: 14px 25px;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #a96667;
+}
+
+
+/* ========================================
+   WELCOME SECTION
+   ======================================== */
+
+.welcome {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.welcome h2 {
+    font-size: 32px;
+}
+
+
+/* ========================================
+   SERVICES PREVIEW
+   ======================================== */
+
+.services-preview {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff5f6;
+}
+
+.services-preview h2 {
+    font-size: 32px;
+}
+
+.services-preview ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-preview li {
+    margin: 10px;
+}
+
+
+/* ========================================
+   CALL TO ACTION
+   ======================================== */
+
+.call-to-action {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 32px;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+}
+/* ========================================
+   LOGO
+   ======================================== */
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   WHY CHOOSE US
+   ======================================== */
+
+.why-us {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.why-us h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.why-us-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-us article {
+    flex: 1;
+    padding: 25px;
+    background-color: #fff5f6;
+    border-radius: 10px;
+}
+
+.why-us article h3 {
+    color: #c08081;
+}
+
+.why-us article p {
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   MOBILE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .why-us-container {
+        flex-direction: column;
+    }
+
+    .why-us article {
+        width: 100%;
+    }
+
+}
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+
+/* About page heading */
+.page-header {
+    background-color: #fff5f6;
+    text-align: center;
+    padding: 70px 20px;
+    border-bottom: 1px solid #f0d4d6;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.page-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* About sections */
+.about-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #222222;
+}
+
+.about-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* Values list */
+.about-section ul {
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.about-section li {
+    background-color: #fff5f6;
+    margin: 15px 0;
+    padding: 18px 20px;
+    border-left: 4px solid #c08081;
+    line-height: 1.6;
+}
+
+
+/* Why Choose Us cards */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.about-cards article {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.about-cards h3 {
+    color: #c08081;
+    margin-bottom: 15px;
+}
+
+.about-cards p {
+    font-size: 16px;
+}
+
+
+/* Professional team */
+.team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.team article {
+    background-color: #fff5f6;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team h3 {
+    color: #c08081;
+    margin-bottom: 15px;
+}
+
+.team p {
+    font-size: 16px;
+}
+
+
+/* About page mobile design */
+@media (max-width: 768px) {
+
+    .page-header h1 {
+        font-size: 32px;
+    }
+
+    .about-section {
+        padding: 45px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 27px;
+    }
+
+    .about-cards,
+    .team {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ========================================
+   ABOUT HERO BACKGROUND
+   ======================================== */
+
+.about-hero {
+    min-height: 450px;
+
+    background-image: url("../images/salon-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-hero-content {
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 40px;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+.about-hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about-hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* ========================================
+   SERVICES PAGE
+   ======================================== */
+
+.service-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.service-section:nth-child(even) {
+    background-color: #fff5f6;
+}
+
+.service-section h2 {
+    font-size: 30px;
+    color: #c08081;
+    margin-bottom: 20px;
+}
+
+.service-section p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.service-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.service-section li {
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+}
+
+
+/* Services page mobile design */
+
+@media (max-width: 768px) {
+
+    .service-section {
+        padding: 40px 20px;
+    }
+
+    .service-section h2 {
+        font-size: 26px;
+    }
+
+}
+/* ========================================
+   GALLERY PAGE
+   ======================================== */
+
+.gallery-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #c08081;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-grid figcaption {
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    color: #333333;
+}
+
+
+/* Gallery mobile design */
+
+@media (max-width: 768px) {
+
+    .gallery-section {
+        padding: 40px 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 250px;
+    }
+
+}
+/* ========================================
+   PRICE LIST PAGE
+   ======================================== */
+
+.price-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.price-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* Price table */
+
+.price-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+
+/* Table headings */
+
+.price-section th {
+    background-color: #c08081;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+
+/* Table cells */
+
+.price-section td {
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* Price column */
+
+.price-section td:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+
+/* Alternating rows */
+
+.price-section tr:nth-child(even) {
+    background-color: #fff5f6;
+}
+
+
+/* Hover effect */
+
+.price-section tr:hover {
+    background-color: #fce4e6;
+}
+
+
+/* Mobile price tables */
+
+@media (max-width: 768px) {
+
+    .price-section {
+        padding: 30px 15px;
+    }
+
+    .price-section h2 {
+        font-size: 25px;
+    }
+
+    .price-section th,
+    .price-section td {
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+
+}
+/* ========================================
+   BOOKING PAGE
+   ======================================== */
+
+.booking-section {
+    max-width: 800px;
+    margin: 20px auto 60px;
+    padding: 40px;
+    background-color: #fff5f6;
+    border-radius: 12px;
+}
+
+
+/* Form labels */
+
+.booking-section label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* Text inputs, dropdown and textarea */
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+/* Input focus */
+
+.booking-section input:focus,
+.booking-section select:focus,
+.booking-section textarea:focus {
+    outline: none;
+    border-color: #c08081;
+}
+
+
+/* Textarea */
+
+.booking-section textarea {
+    resize: vertical;
+}
+
+
+/* Submit button */
+
+.booking-section .button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+}
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+
+.contact-info {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.contact-info h3 {
+    margin-top: 30px;
+}
+
+
+/* ========================================
+   LOCATIONS
+   ======================================== */
+
+.locations {
+    padding: 50px 20px;
+    background-color: #fff5f6;
+    text-align: center;
+}
+
+.locations h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.location {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.location h3 {
+    font-size: 25px;
+}
+
+.location iframe {
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+
+.contact-form-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-form-section label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+    outline: none;
+    border-color: #c08081;
+}
+
+.contact-form-section textarea {
+    resize: vertical;
+}
+
+.contact-form-section .button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+
+/* ========================================
+   SOCIAL MEDIA
+   ======================================== */
+
+.social-media {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff5f6;
+}
+
+.social-media h2 {
+    font-size: 30px;
+}
+
+.social-media a {
+    color: #c08081;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   MOBILE CONTACT PAGE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .location {
+        padding: 15px;
+    }
+
+    .location iframe {
+        height: 250px;
+    }
+
+}
