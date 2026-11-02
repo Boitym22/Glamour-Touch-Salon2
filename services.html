@@ -1,58 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Services | Glamour Touch Salon & Makeup Studio</title>
+    <title>Beauty Services | Glamour Touch Salon & Makeup Studio</title>
 
-    <!-- Link to the website stylesheet -->
+    <meta name="description"
+        content="Explore hair styling, professional makeup, nail care, eyelash extensions, eyebrow shaping and skincare treatments at Glamour Touch Salon.">
+
+    <meta name="keywords"
+        content="beauty services, hair styling, makeup, nail care, eyelash extensions, eyebrow shaping, skincare treatments">
+
+    <meta name="author" content="Glamour Touch Salon & Makeup Studio">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-
 
 <body>
 
     <!-- Header -->
     <header>
 
-        <!-- Salon logo -->
-        <img src="./images/logo.png"
-             alt="Glamour Touch Salon & Makeup Studio Logo"
-             width="180">
+        <a href="index.html">
+            <img src="images/logo.png"
+                alt="Glamour Touch Salon and Makeup Studio logo"
+                class="logo"
+                width="180">
+        </a>
 
-        <!-- Website navigation -->
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+        <!-- Mobile Navigation -->
+        <button class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+            ☰ Menu
+        </button>
+
         <nav id="main-navigation">
 
             <a href="index.html">Home</a>
-
             <a href="about.html">About Us</a>
-
             <a href="services.html" aria-current="page">Services</a>
-
             <a href="gallery.html">Gallery</a>
-
             <a href="prices.html">Price List</a>
-
             <a href="booking.html">Book Appointment</a>
-
             <a href="contact.html">Contact Us</a>
 
         </nav>
 
     </header>
 
-
-    <!-- Main content -->
     <main>
 
-
-        <!-- Services page introduction -->
+        <!-- Page Introduction -->
         <section class="page-header">
 
             <h1>Our Beauty Services</h1>
@@ -64,139 +71,213 @@
 
         </section>
 
+        <!-- Service Search and Filter -->
+        <section class="service-search-section">
 
-        <!-- Hair Styling -->
-        <section class="service-section">
-
-            <h2>Hair Styling</h2>
+            <h2>Find Your Beauty Service</h2>
 
             <p>
-                Our professional hairstyling services are designed to
-                create beautiful looks for everyday occasions and
-                special events.
+                Search for a service or select a category below
+                to find what you are looking for.
             </p>
 
-            <ul>
-                <li>Haircuts and Styling</li>
-                <li>Blowouts</li>
-                <li>Hair Treatments</li>
-                <li>Special Occasion Hairstyles</li>
-                <li>Event Hairstyles</li>
-            </ul>
+            <label for="service-search">Search Services</label>
+
+            <input
+                type="search"
+                id="service-search"
+                placeholder="Search hair, makeup, nails..."
+                aria-label="Search beauty services">
+
+            <label for="service-filter">Filter by Category</label>
+
+            <select id="service-filter">
+
+                <option value="all">All Services</option>
+                <option value="hair">Hair Styling</option>
+                <option value="makeup">Professional Makeup</option>
+                <option value="nails">Nail Care</option>
+                <option value="lashes">Eyelash Extensions</option>
+                <option value="eyebrows">Eyebrow Shaping</option>
+                <option value="skincare">Skincare Treatments</option>
+
+            </select>
 
         </section>
 
+        <!-- Dynamic Service Listings -->
+        <section class="services-container">
 
-        <!-- Professional Makeup -->
-        <section class="service-section">
+            <h2>Explore Our Services</h2>
 
-            <h2>Professional Makeup</h2>
+            <div id="services-list" class="services-grid">
 
-            <p>
-                Our professional makeup services help create polished
-                and personalised looks for every occasion.
+                <!-- Hair Styling -->
+                <article class="service-section service-card"
+                    data-category="hair">
+
+                    <h3>Hair Styling</h3>
+
+                    <p>
+                        Professional hairstyling for everyday looks
+                        and special occasions.
+                    </p>
+
+                    <ul>
+                        <li>Haircuts and Styling</li>
+                        <li>Blowouts</li>
+                        <li>Hair Treatments</li>
+                        <li>Special Occasion Hairstyles</li>
+                        <li>Event Hairstyles</li>
+                    </ul>
+
+                    <a href="booking.html" class="button">
+                        Book Hair Styling
+                    </a>
+
+                </article>
+
+                <!-- Professional Makeup -->
+                <article class="service-section service-card"
+                    data-category="makeup">
+
+                    <h3>Professional Makeup</h3>
+
+                    <p>
+                        Personalised makeup looks for birthdays,
+                        weddings and special occasions.
+                    </p>
+
+                    <ul>
+                        <li>Everyday Makeup</li>
+                        <li>Evening Makeup</li>
+                        <li>Birthday Makeup</li>
+                        <li>Wedding Makeup</li>
+                        <li>Special Event Makeup</li>
+                    </ul>
+
+                    <a href="booking.html" class="button">
+                        Book Makeup
+                    </a>
+
+                </article>
+
+                <!-- Nail Care -->
+                <article class="service-section service-card"
+                    data-category="nails">
+
+                    <h3>Nail Care</h3>
+
+                    <p>
+                        Professional nail treatments to keep your
+                        hands and feet looking beautiful.
+                    </p>
+
+                    <ul>
+                        <li>Manicures</li>
+                        <li>Pedicures</li>
+                        <li>Nail Polish</li>
+                        <li>Gel Nails</li>
+                        <li>Nail Art</li>
+                    </ul>
+
+                    <a href="booking.html" class="button">
+                        Book Nail Care
+                    </a>
+
+                </article>
+
+                <!-- Eyelash Extensions -->
+                <article class="service-section service-card"
+                    data-category="lashes">
+
+                    <h3>Eyelash Extensions</h3>
+
+                    <p>
+                        Enhance your eyes with professionally applied
+                        eyelash extensions.
+                    </p>
+
+                    <ul>
+                        <li>Classic Eyelash Extensions</li>
+                        <li>Volume Eyelash Extensions</li>
+                        <li>Hybrid Eyelash Extensions</li>
+                        <li>Eyelash Refills</li>
+                    </ul>
+
+                    <a href="booking.html" class="button">
+                        Book Eyelash Extensions
+                    </a>
+
+                </article>
+
+                <!-- Eyebrow Shaping -->
+                <article class="service-section service-card"
+                    data-category="eyebrows">
+
+                    <h3>Eyebrow Shaping</h3>
+
+                    <p>
+                        Create a neat and defined eyebrow shape
+                        suited to your facial features.
+                    </p>
+
+                    <ul>
+                        <li>Eyebrow Shaping</li>
+                        <li>Eyebrow Waxing</li>
+                        <li>Eyebrow Tinting</li>
+                        <li>Eyebrow Grooming</li>
+                    </ul>
+
+                    <a href="booking.html" class="button">
+                        Book Eyebrow Shaping
+                    </a>
+
+                </article>
+
+                <!-- Skincare -->
+                <article class="service-section service-card"
+                    data-category="skincare">
+
+                    <h3>Skincare Treatments</h3>
+
+                    <p>
+                        Relax and refresh your skin with our
+                        professional skincare treatments.
+                    </p>
+
+                    <ul>
+                        <li>Facials</li>
+                        <li>Deep Cleansing Treatments</li>
+                        <li>Hydrating Treatments</li>
+                        <li>Skin Refresh Treatments</li>
+                    </ul>
+
+                    <a href="booking.html" class="button">
+                        Book Skincare Treatment
+                    </a>
+
+                </article>
+
+            </div>
+
+            <p id="no-services-message"
+                role="status"
+                aria-live="polite"
+                hidden>
+                No services match your search. Please try another search.
             </p>
-
-            <ul>
-                <li>Everyday Makeup</li>
-                <li>Evening Makeup</li>
-                <li>Birthday Makeup</li>
-                <li>Wedding Makeup</li>
-                <li>Special Event Makeup</li>
-            </ul>
 
         </section>
 
-
-        <!-- Nail Care -->
-        <section class="service-section">
-
-            <h2>Nail Care</h2>
-
-            <p>
-                Treat yourself to professional nail care designed to
-                keep your hands looking neat, stylish, and beautiful.
-            </p>
-
-            <ul>
-                <li>Manicures</li>
-                <li>Pedicures</li>
-                <li>Nail Polish</li>
-                <li>Gel Nails</li>
-                <li>Nail Art</li>
-            </ul>
-
-        </section>
-
-
-        <!-- Eyelash Extensions -->
-        <section class="service-section">
-
-            <h2>Eyelash Extensions</h2>
-
-            <p>
-                Enhance your eyes with professionally applied eyelash
-                extensions that create a beautiful and defined look.
-            </p>
-
-            <ul>
-                <li>Classic Eyelash Extensions</li>
-                <li>Volume Eyelash Extensions</li>
-                <li>Hybrid Eyelash Extensions</li>
-                <li>Eyelash Refills</li>
-            </ul>
-
-        </section>
-
-
-        <!-- Eyebrow Shaping -->
-        <section class="service-section">
-
-            <h2>Eyebrow Shaping</h2>
-
-            <p>
-                Our eyebrow services help create a neat and defined
-                shape suited to your facial features.
-            </p>
-
-            <ul>
-                <li>Eyebrow Shaping</li>
-                <li>Eyebrow Waxing</li>
-                <li>Eyebrow Tinting</li>
-                <li>Eyebrow Grooming</li>
-            </ul>
-
-        </section>
-
-
-        <!-- Skincare -->
-        <section class="service-section">
-
-            <h2>Skincare Treatments</h2>
-
-            <p>
-                Relax and refresh your skin with our selection of
-                professional skincare treatments.
-            </p>
-
-            <ul>
-                <li>Facials</li>
-                <li>Deep Cleansing Treatments</li>
-                <li>Hydrating Treatments</li>
-                <li>Skin Refresh Treatments</li>
-            </ul>
-
-        </section>
-
-
-        <!-- Call to action -->
+        <!-- Call to Action -->
         <section class="call-to-action">
 
             <h2>Ready for Your Glamour Touch?</h2>
 
             <p>
-                Choose your favourite beauty service and book your
-                appointment today.
+                Choose your favourite beauty service and request
+                your appointment today.
             </p>
 
             <a href="booking.html" class="button">
@@ -205,9 +286,7 @@
 
         </section>
 
-
     </main>
-
 
     <!-- Footer -->
     <footer>
@@ -219,8 +298,8 @@
 
     </footer>
 
-
     <script src="js/script.js" defer></script>
+
 </body>
 
 </html>

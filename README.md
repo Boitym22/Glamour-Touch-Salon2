@@ -1,100 +1,27 @@
 # Glamour Touch Salon & Makeup Studio
 
-## Project Overview
-Glamour Touch Salon & Makeup Studio is a responsive website developed for the WEDE5020 module. The website provides information about the salon, its services, gallery, prices and appointment booking.
+A responsive multi-page demonstration salon website created for the WEDE5020 Web Development Portfolio of Evidence.
 
-## Project Purpose
-The purpose of this website is to establish an online presence for the salon and make information about its services easily accessible to customers.
+## Purpose
+Showcase salon services, prices, images, branch information and demonstration booking/contact forms.
 
-## Website Pages
-- **Home:** Introduction to the salon.
-- **About:** Information about the salon.
-- **Services:** Available salon and makeup services.
-- **Gallery:** Display of salon and makeup images.
-- **Price List:** Service prices.
-- **Booking:** Appointment request form.
-- **Contact:** Contact information and contact form.
+## Pages
+- `index.html` — homepage and service preview
+- `about.html` — salon background
+- `services.html` — available treatments
+- `gallery.html` — photo gallery
+- `prices.html` — price list
+- `booking.html` — demonstration booking form
+- `contact.html` — contact details, maps and demonstration enquiry form
 
-## Features
-- Responsive website design.
-- Mobile navigation menu.
-- Salon service information.
-- Image gallery.
-- Service price list.
-- Booking and contact forms.
-- JavaScript form validation.
-- Interactive website elements.
+## Technologies and features
+HTML5, CSS3, JavaScript, Google Maps embeds and Google Fonts. Responsive layouts, collapsible mobile navigation, accessible active links, browser-side form validation and appointment date restrictions.
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- Git and GitHub
+## How to run
+Extract the folder, then open `index.html` in a browser. Internet access is needed for Google Fonts and embedded maps. No server or build tool is required.
 
-## How to View the Website
-1. Open the GitHub repository.
-2. Download the project using the Code button.
-3. Extract the ZIP folder.
-4. Open the `index.html` file in a web browser.
+## Important limitation
+The forms validate in the browser but **do not send information or create appointments**. A backend or form hosting service is needed before production use. The addresses and contact details should be verified before publishing as a real business website.
 
-## Project Structure
-- `index.html`
-- `about.html`
-- `services.html`
-- `gallery.html`
-- `prices.html`
-- `booking.html`
-- `contact.html`
-- `css/style.css`
-- `js/script.js`
-- `images/`
-
-
-## Academic Module
-WEDE5020 – Website Development
-# References
-
-## 1. Image References
-
-Images used in the Glamour Touch Salon & Makeup Studio website should be credited to their original creators or sources.
-
-For each externally sourced image, the following information must be provided:
-- Image name or description.
-- Original creator or website.
-- Image source URL.
-- Date accessed.
-
-| Image description | Source | URL |
-|---|---|---|
-| Salon images | To be verified | To be added |
-| Makeup images | To be verified | To be added |
-| Gallery images | To be verified | To be added |
-
-## 2. Design References
-
-Design inspiration and website development resources should be acknowledged below.
-
-| Resource | Purpose | URL |
-|---|---|---|
-| W3Schools | HTML, CSS and JavaScript learning resources | https://www.w3schools.com/ |
-| MDN Web Docs | HTML, CSS and JavaScript documentation | https://developer.mozilla.org/ |
-
-## 3. Map References
-
-Google Maps is used as a location reference on the Contact page, if applicable.
-
-Source: https://www.google.com/maps/
-
-## 4. Font References
-
-External fonts used in the website should be acknowledged here. Check the CSS stylesheet for the actual font provider and font family.
-
-## 5. Research References
-
-Additional research resources consulted during website development should be listed here, including their titles, authors or organisations, URLs and access dates.
-
-## 6. Acknowledgements
-
-All external images, design resources, research materials and third-party resources used in developing this website must be acknowledged.
-
-**Note:** The image sources, exact map location and any external fonts must be verified and completed before final submission.
+## Author
+Boitumelo Masiyakoana — WEDE5020, 2026.

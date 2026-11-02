@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book Appointment | Glamour Touch Salon & Makeup Studio</title>
+    <title>Book an Appointment | Glamour Touch Salon</title>
 
-    <!-- Link to website stylesheet -->
+    <meta name="description"
+        content="Request a hair, makeup, nail, eyelash, eyebrow or skincare appointment at Glamour Touch Salon & Makeup Studio.">
+
+    <meta name="keywords"
+        content="salon booking, beauty appointment, makeup, hair styling, nail care, Glamour Touch">
+
+    <meta name="author" content="Glamour Touch Salon & Makeup Studio">
+
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,16 +26,22 @@
     <!-- Header and Navigation -->
     <header>
 
-        <!-- Salon Logo -->
         <a href="index.html">
             <img src="images/logo.png"
-                 alt="Glamour Touch Salon & Makeup Studio Logo"
-                 class="logo">
+                alt="Glamour Touch Salon and Makeup Studio logo"
+                class="logo">
         </a>
 
-        <!-- Navigation Menu -->
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+        <button class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+            ☰ Menu
+        </button>
+
         <nav id="main-navigation">
+
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
@@ -33,12 +49,11 @@
             <a href="prices.html">Price List</a>
             <a href="booking.html" aria-current="page">Book Appointment</a>
             <a href="contact.html">Contact Us</a>
+
         </nav>
 
     </header>
 
-
-    <!-- Main Content -->
     <main>
 
         <!-- Page Introduction -->
@@ -53,113 +68,103 @@
 
         </section>
 
-
         <!-- Booking Form -->
         <section class="booking-section">
 
-            <form id="booking-form">
+            <h2>Appointment Request Form</h2>
 
-                <!-- Full Name -->
+            
+    <form id="booking-form" action="https://formspree.io/f/mvkkvwwk" method="POST"></form>
+
                 <label for="name">Full Name</label>
 
-                <input type="text"
-                       id="name"
-                       name="name"
-                       placeholder="Enter your full name"
-                       required>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    minlength="2"
+                    maxlength="80"
+                    autocomplete="name"
+                    required>
 
-
-                <!-- Phone Number -->
                 <label for="phone">Phone Number</label>
 
-                <input type="tel"
-                       id="phone"
-                       name="phone"
-                       placeholder="Enter your phone number"
-                       required>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 072 123 4567"
+                    pattern="[0-9 +()-]{10,20}"
+                    minlength="10"
+                    maxlength="20"
+                    autocomplete="tel"
+                    required>
 
-
-                <!-- Email -->
                 <label for="email">Email Address</label>
 
-                <input type="email"
-                       id="email"
-                       name="email"
-                       placeholder="Enter your email address"
-                       required>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                    required>
 
-
-                <!-- Service -->
                 <label for="service">Select a Service</label>
 
                 <select id="service" name="service" required>
 
                     <option value="">-- Choose a Service --</option>
 
-                    <option value="hair-styling">
-                        Hair Styling
-                    </option>
-
-                    <option value="makeup">
-                        Professional Makeup
-                    </option>
-
-                    <option value="nails">
-                        Nail Care
-                    </option>
-
-                    <option value="eyelashes">
-                        Eyelash Extensions
-                    </option>
-
-                    <option value="eyebrows">
-                        Eyebrow Shaping
-                    </option>
-
-                    <option value="skincare">
-                        Skincare Treatment
-                    </option>
+                    <option value="hair-styling">Hair Styling</option>
+                    <option value="makeup">Professional Makeup</option>
+                    <option value="nails">Nail Care</option>
+                    <option value="eyelashes">Eyelash Extensions</option>
+                    <option value="eyebrows">Eyebrow Shaping</option>
+                    <option value="skincare">Skincare Treatment</option>
 
                 </select>
 
-
-                <!-- Appointment Date -->
                 <label for="date">Preferred Date</label>
 
-                <input type="date"
-                       id="date"
-                       name="date"
-                       required>
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required>
 
-
-                <!-- Appointment Time -->
                 <label for="time">Preferred Time</label>
 
-                <input type="time"
-                       id="time"
-                       name="time"
-                       required>
+                <input
+                    type="time"
+                    id="time"
+                    name="time"
+                    required>
 
-
-                <!-- Additional Notes -->
                 <label for="message">Additional Notes</label>
 
-                <textarea id="message"
-                          name="message"
-                          rows="6"
-                          placeholder="Tell us anything we should know about your appointment"></textarea>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    maxlength="1000"
+                    placeholder="Tell us anything we should know about your appointment"></textarea>
 
-
-                <!-- Submit Button -->
                 <button type="submit" class="button">
-                    Book Appointment
+                    Submit Appointment Request
                 </button>
 
-            <p class="form-feedback" role="status" aria-live="polite"></p>
+                <p
+                    class="form-feedback"
+                    id="booking-feedback"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
             </form>
 
         </section>
-
 
         <!-- Booking Information -->
         <section class="call-to-action">
@@ -167,9 +172,13 @@
             <h2>Appointment Information</h2>
 
             <p>
-                Please note that submitting this form is an appointment
-                request. Our salon team will contact you to confirm
-                your booking.
+                Submitting this form is an appointment request
+                and does not guarantee availability.
+            </p>
+
+            <p>
+                Our salon team will contact you to confirm
+                your appointment.
             </p>
 
             <p>
@@ -181,8 +190,6 @@
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
 
         <p>
@@ -193,6 +200,6 @@
     </footer>
 
     <script src="js/script.js" defer></script>
-</body>
 
+</body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us | Glamour Touch Salon & Makeup Studio</title>
+    <title>Contact Glamour Touch | Salon & Makeup Studio</title>
 
-    <!-- Link to website stylesheet -->
+    <meta name="description"
+        content="Contact Glamour Touch Salon & Makeup Studio for beauty appointments, service enquiries and general information.">
+
+    <meta name="keywords"
+        content="Glamour Touch, salon, makeup studio, beauty services, contact salon, beauty appointments">
+
+    <meta name="author" content="Glamour Touch Salon & Makeup Studio">
+
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,15 +26,20 @@
     <!-- Header and Navigation -->
     <header>
 
-        <!-- Salon Logo -->
         <a href="index.html">
             <img src="images/logo.png"
-                 alt="Glamour Touch Salon & Makeup Studio Logo"
-                 class="logo">
+                alt="Glamour Touch Salon and Makeup Studio logo"
+                class="logo">
         </a>
 
-        <!-- Navigation Menu -->
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+        <button class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+            ☰ Menu
+        </button>
+
         <nav id="main-navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -37,8 +52,6 @@
 
     </header>
 
-
-    <!-- Main Content -->
     <main>
 
         <!-- Page Heading -->
@@ -48,57 +61,36 @@
 
             <p>
                 We would love to hear from you. Contact Glamour Touch
-                Salon & Makeup Studio for appointments, enquiries,
-                and more information about our services.
+                Salon & Makeup Studio for appointments, enquiries
+                and information about our beauty services.
             </p>
 
         </section>
-
 
         <!-- Contact Information -->
         <section class="contact-info">
 
             <h2>Get In Touch</h2>
 
-            <p>
-                <strong>Telephone:</strong>
-                011 555 1234
-            </p>
+            <p><strong>Telephone:</strong> 011 555 1234</p>
 
-            <p>
-                <strong>WhatsApp:</strong>
-                072 555 6789
-            </p>
+            <p><strong>WhatsApp:</strong> 072 555 6789</p>
 
-            <p>
-                <strong>Email:</strong>
-                info@glamourtouch.co.za
-            </p>
+            <p><strong>Email:</strong> info@glamourtouch.co.za</p>
 
             <h3>Business Hours</h3>
 
-            <p>
-                Monday - Friday: 09:00 - 18:00
-            </p>
-
-            <p>
-                Saturday: 09:00 - 16:00
-            </p>
-
-            <p>
-                Sunday: 10:00 - 14:00
-            </p>
+            <p>Monday - Friday: 09:00 - 18:00</p>
+            <p>Saturday: 09:00 - 16:00</p>
+            <p>Sunday: 10:00 - 14:00</p>
 
         </section>
-
 
         <!-- Branch Locations -->
         <section class="locations">
 
             <h2>Our Locations</h2>
 
-
-            <!-- Branch 1 -->
             <div class="location">
 
                 <h3>Sandton Branch</h3>
@@ -110,8 +102,8 @@
                     Gauteng
                 </p>
 
-                <!-- Google Maps -->
-                <iframe title="Map showing Glamour Touch salon branch area"
+                <iframe
+                    title="Map of Sandton, Johannesburg"
                     src="https://www.google.com/maps?q=Sandton%2C%20Johannesburg%2C%20South%20Africa&output=embed"
                     width="100%"
                     height="300"
@@ -122,8 +114,6 @@
 
             </div>
 
-
-            <!-- Branch 2 -->
             <div class="location">
 
                 <h3>Rosebank Branch</h3>
@@ -135,8 +125,8 @@
                     Gauteng
                 </p>
 
-                <!-- Google Maps -->
-                <iframe title="Map showing Glamour Touch salon branch area"
+                <iframe
+                    title="Map of Rosebank, Johannesburg"
                     src="https://www.google.com/maps?q=Rosebank%2C%20Johannesburg%2C%20South%20Africa&output=embed"
                     width="100%"
                     height="300"
@@ -149,78 +139,100 @@
 
         </section>
 
-
         <!-- Contact Form -->
         <section class="contact-form-section">
 
             <h2>Send Us a Message</h2>
 
+            <p>
+                Complete the form below and tell us how we can assist you.
+            </p>
+
             <form id="contact-form">
 
-                <!-- Name -->
-                <label for="contact-name">
-                    Full Name
-                </label>
+                <label for="contact-name">Full Name</label>
 
                 <input
                     type="text"
                     id="contact-name"
                     name="name"
                     placeholder="Enter your full name"
+                    minlength="2"
+                    maxlength="80"
+                    autocomplete="name"
                     required>
 
-
-                <!-- Email -->
-                <label for="contact-email">
-                    Email Address
-                </label>
+                <label for="contact-email">Email Address</label>
 
                 <input
                     type="email"
                     id="contact-email"
                     name="email"
                     placeholder="Enter your email address"
+                    autocomplete="email"
                     required>
 
+                <label for="contact-phone">Phone Number</label>
 
-                <!-- Subject -->
-                <label for="subject">
-                    Subject
-                </label>
+                <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9 +()-]{10,20}"
+                    minlength="10"
+                    maxlength="20"
+                    autocomplete="tel"
+                    required>
+
+                <label for="message-type">Message Type</label>
+
+                <select id="message-type" name="message-type" required>
+
+                    <option value="">Select message type</option>
+                    <option value="General enquiry">General enquiry</option>
+                    <option value="Appointment enquiry">Appointment enquiry</option>
+                    <option value="Service enquiry">Service enquiry</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaint">Complaint</option>
+
+                </select>
+
+                <label for="subject">Subject</label>
 
                 <input
                     type="text"
                     id="subject"
                     name="subject"
-                    placeholder="What would you like to ask us?"
+                    placeholder="Enter your subject"
+                    maxlength="100"
                     required>
 
-
-                <!-- Message -->
-                <label for="contact-message">
-                    Message
-                </label>
+                <label for="contact-message">Message</label>
 
                 <textarea
                     id="contact-message"
                     name="message"
                     rows="6"
+                    minlength="10"
+                    maxlength="1000"
                     placeholder="Enter your message"
                     required></textarea>
 
-
-                <!-- Submit -->
-                <button
-                    type="submit"
-                    class="button">
+                <button type="submit" class="button">
                     Send Message
                 </button>
 
-            <p class="form-feedback" role="status" aria-live="polite"></p>
+                <p
+                    class="form-feedback"
+                    id="contact-feedback"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
             </form>
 
         </section>
-
 
         <!-- Social Media -->
         <section class="social-media">
@@ -229,28 +241,21 @@
 
             <p>
                 Stay up to date with our latest beauty looks,
-                promotions, and special offers.
+                promotions and special offers.
             </p>
 
             <p>
-                <span>Facebook (official link not provided)</span>
-                |
-                <span>Instagram (official link not provided)</span>
-                |
-                <span>WhatsApp (official link not provided)</span>
+                Follow our official social media pages when available.
             </p>
 
         </section>
-
 
         <!-- Booking Call To Action -->
         <section class="call-to-action">
 
             <h2>Ready for Your Glamour Touch?</h2>
 
-            <p>
-                Book your beauty appointment today.
-            </p>
+            <p>Book your beauty appointment today.</p>
 
             <a href="booking.html" class="button">
                 Book an Appointment
@@ -259,7 +264,6 @@
         </section>
 
     </main>
-
 
     <!-- Footer -->
     <footer>
@@ -272,6 +276,6 @@
     </footer>
 
     <script src="js/script.js" defer></script>
-</body>
 
+</body>
 </html>

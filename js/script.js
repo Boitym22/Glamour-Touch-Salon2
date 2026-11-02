@@ -1,37 +1,84 @@
-// Navigation and demonstration form validation for the Part 2 improvements.
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const navigation = document.querySelector('#main-navigation');
-  if (toggle && navigation) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      toggle.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
-      navigation.classList.toggle('is-open', !expanded);
-    });
-  }
 
-  const dateInput = document.querySelector('#date');
-  const localDate = (date) => [date.getFullYear(), String(date.getMonth()+1).padStart(2,'0'), String(date.getDate()).padStart(2,'0')].join('-');
-  if (dateInput) dateInput.min = localDate(new Date());
-
-  for (const id of ['booking-form', 'contact-form']) {
+  // BOOKING AND CONTACT FORM SUBMISSION
+  ['booking-form', 'contact-form'].forEach((id) => {
     const form = document.getElementById(id);
-    if (!form) continue;
-    form.addEventListener('submit', (event) => {
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
+
       const feedback = form.querySelector('.form-feedback');
-      if (dateInput && id === 'booking-form' && dateInput.value < localDate(new Date())) {
+
+      if (!form.reportValidity()) return;
+
+      if (
+        id === 'booking-form' &&
+        dateInput &&
+        dateInput.value < localDate(new Date())
+      ) {
         dateInput.setCustomValidity('Please choose today or a future date.');
         dateInput.reportValidity();
         dateInput.setCustomValidity('');
-        feedback.textContent = 'Please choose a valid appointment date.';
+
+        if (feedback) {
+          feedback.textContent = 'Please choose a valid appointment date.';
+        }
+
         return;
       }
-      if (!form.reportValidity()) return;
-      feedback.textContent = id === 'booking-form'
-        ? 'Your request passed validation. This is a demonstration form; no booking has been sent to the salon.'
-        : 'Your message passed validation. This is a demonstration form; no message has been sent.';
+
+      if (!form.action || !form.action.startsWith('https://formspree.io/f/')) {
+        if (feedback) {
+          feedback.textContent = 'This form is not connected yet.';
+        }
+        return;
+      }
+
+      if (feedback) {
+        feedback.textContent = 'Sending your request...';
+      }
+
+      const submitButton = form.querySelector('[type="submit"]');
+
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          if (feedback) {
+            feedback.textContent = id === 'booking-form'
+              ? 'Thank you! Your booking request has been sent successfully. The salon will contact you to confirm availability.'
+              : 'Thank you! Your message has been sent successfully.';
+          }
+
+          form.reset();
+
+          if (id === 'booking-form' && dateInput) {
+            dateInput.min = localDate(new Date());
+          }
+        } else {
+          if (feedback) {
+            feedback.textContent = 'Sorry, your request could not be sent. Please try again.';
+          }
+        }
+      } catch (error) {
+        if (feedback) {
+          feedback.textContent = 'A connection problem occurred. Please check your internet and try again.';
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      }
     });
-  }
-});
+  });
