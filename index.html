@@ -21,16 +21,17 @@
     <header>
 
         <!-- Salon logo -->
-        <a href="index.html">
+        <a href="index.html" aria-current="page">
             <img src="images/logo.png"
                  alt="Glamour Touch Salon & Makeup Studio Logo"
                  class="logo">
         </a>
 
         <!-- Main navigation -->
-        <nav>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+        <nav id="main-navigation">
 
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
 
             <a href="about.html">About Us</a>
 
@@ -108,7 +109,7 @@
 
     <div class="about-hero-content">
 
-        <h1>About Glamour Touch</h1>
+        <h2>About Glamour Touch</h2>
 
         <p>
             Discover who we are, what we believe in, and why our clients
@@ -119,6 +120,9 @@
 
 </section>
 
+        <!-- Services preview -->
+        <section class="services-preview">
+            <h2>Our Services</h2>
             <ul>
 
                 <li>Hair Styling</li>
@@ -224,6 +228,7 @@
     </footer>
 
 
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

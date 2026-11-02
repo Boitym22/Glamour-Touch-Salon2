@@ -24,14 +24,15 @@
         </a>
 
         <!-- Navigation Menu -->
-        <nav>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+        <nav id="main-navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="gallery.html">Gallery</a>
             <a href="prices.html">Price List</a>
             <a href="booking.html">Book Appointment</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html" aria-current="page">Contact Us</a>
         </nav>
 
     </header>
@@ -110,7 +111,7 @@
                 </p>
 
                 <!-- Google Maps -->
-                <iframe
+                <iframe title="Map showing Glamour Touch salon branch area"
                     src="https://www.google.com/maps?q=Sandton%2C%20Johannesburg%2C%20South%20Africa&output=embed"
                     width="100%"
                     height="300"
@@ -135,7 +136,7 @@
                 </p>
 
                 <!-- Google Maps -->
-                <iframe
+                <iframe title="Map showing Glamour Touch salon branch area"
                     src="https://www.google.com/maps?q=Rosebank%2C%20Johannesburg%2C%20South%20Africa&output=embed"
                     width="100%"
                     height="300"
@@ -154,7 +155,7 @@
 
             <h2>Send Us a Message</h2>
 
-            <form>
+            <form id="contact-form">
 
                 <!-- Name -->
                 <label for="contact-name">
@@ -215,6 +216,7 @@
                     Send Message
                 </button>
 
+            <p class="form-feedback" role="status" aria-live="polite"></p>
             </form>
 
         </section>
@@ -231,11 +233,11 @@
             </p>
 
             <p>
-                <a href="#" target="_blank">Facebook</a>
+                <span>Facebook (official link not provided)</span>
                 |
-                <a href="#" target="_blank">Instagram</a>
+                <span>Instagram (official link not provided)</span>
                 |
-                <a href="#" target="_blank">WhatsApp</a>
+                <span>WhatsApp (official link not provided)</span>
             </p>
 
         </section>
@@ -269,6 +271,7 @@
 
     </footer>
 
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
